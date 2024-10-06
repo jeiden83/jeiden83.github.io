@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fate Series</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #2E474B;
+            color: white;
+        }
+        .container {
+            margin: 20px;
+        }
+        .toggle-section {
+            background-color: #496B5E;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+        .toggle-section h3 {
+            margin: 0;
+        }
+        .content {
+            display: none;
+            background-color: #1E3330;
+            padding: 10px;
+            border-radius: 10px;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .content.show {
+            display: block;
+            opacity: 1;
+        }
+        ol li {
+            padding: 5px 0;
+            list-style-position: inside;
+        }
+        ol li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        ol li a:hover {
+            color: rgb(255, 255, 139);
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.929);
+            color: rgb(208, 238, 255);
+            border-radius: 5px;
+            padding: 5px;
+            z-index: 12;
+            font-size: 13px;
+        }
+        .hover-item {
+            position: relative;
+        }
+        .hover-item:hover .tooltip {
+            display: block;
+        }
+        .spacer {
+            margin: 10px 0; /* Espacio entre los elementos */
+        }
+		.h2 {
+            padding-left: 20px;
+		}
+        .footer {
+            font-size: 6px;
+            padding-left: 22px;
+		}
+    </style>
+</head>
+<body>
+	<h2 class="h2">Lista y orden del anime de Fate</h2>
+    <div class="container">
+        <div class="toggle-section" onclick="toggleContent('historiaPrincipal')">
+            <h3>Historia Principal</h3>
+        </div>
+        <div id="historiaPrincipal" class="content">
+            <ol>
+                <li class="hover-item"><a href="https://myanimelist.net/anime/356/Fate_stay_night">Fate/stay night</a>
+                    <div class="tooltip">El inicio de todo. Obligatorio de ver así sea de la prehistoria ya que es el pilar de la historia principal.</div>
+                </li>
+                <li class="hover-item"><a href="https://myanimelist.net/anime/12565/Fate_Prototype">Fate/prototype</a>
+                    <div class="tooltip">Corta OVA de lo que iba a ser F/SN en un principio. Luego le adaptaron una precuela en forma de LN.</div>
+                </li>
+                <li class="hover-item"><a href="https://myanimelist.net/anime/10087/Fate_Zero">Fate/zero</a>
+                    <div class="tooltip">Dos temporadas. Precuela del F/SN, animada por Ufotable, muestra la guerra del Santo Grial anterior.</div>
+                </li>
+                <li class="hover-item"><a href="https://myanimelist.net/anime/13263/Fate_Zero__Onegai_Einzbern_Soudanshitsu">Fate/zero specials</a>
+                    <div class="tooltip">Obra maestra, sobre todo el final, pero no deja de ser un especial. No saltar si te gustó F/zero.</div>
+                </li>
+                <li class="hover-item"><a href="https://myanimelist.net/anime/22297/Fate_stay_night__Unlimited_Blade_Works">Fate/stay night: Unlimited Blade Works</a>
+                    <div class="tooltip">Dos temporadas. La segunda ruta animada por Ufotable, una adaptación que destacó cuando salió.</div>
+                </li>
+                <li class="hover-item"><a href="https://myanimelist.net/anime/25537/Fate_stay_night_Movie__Heavens_Feel_-_I_Presage_Flower">Fate/stay night: Heavens Feel</a>
+                    <div class="tooltip">Trilogía de películas. La última ruta de la principal historia y el punto álgido de la serie animada.</div>
+                </li>
+            </ol>
+        </div>
+
+        <div class="toggle-section" onclick="toggleContent('otrasHistorias')">
+            <h3>Otras Historias</h3>
+        </div>
+        <div id="otrasHistorias" class="content">
+            <ol type="I" start="7">
+                <li class="hover-item"><a href="https://myanimelist.net/anime/14829/Fate_kaleid_liner_Prisma%E2%98%86Illya?q=prisma%20kaleid&cat=anime">Fate/Kaleid liner Prisma☆Illya [(2wei!)(2wei Herz!)(3rei!!)]</a>
+                    <div class="tooltip">Primera de las paralelas lineas de fate para empezar. Lo que seria la verdadera Illya route que no logro ser en el F/SN. No hagan caso al fanservice que despues se pone bueno</div>
+                </li>
+                <li class="hover-item"><a href="https://myanimelist.net/anime/34100/Fate_kaleid_liner_Prisma%E2%98%86Illya_Movie__Sekka_no_Chikai">Fate/Kaleid liner Prisma☆Illya Movie: Sekka no Chikai</a>
+                    <div class="tooltip">Primera pelicula precuela de como se llego al inicio del anime. El señor en todo su esplendor</div>
+                </li>
+                <li class="hover-item"><a href="https://myanimelist.net/anime/36833/Fate_kaleid_liner_Prisma%E2%98%86Illya_Movie__Sekka_no_Chikai_-_Kuro_Sakura_no_Heya">Fate/kaleid liner Prisma☆Illya Movie: Sekka no Chikai - Kuro Sakura no Heya</a>
+                    <div class="tooltip">Especial de la pelicula. Skipeable</div>
+                </li>
+				<li class="hover-item"><a href="https://myanimelist.net/anime/42030/Fate_kaleid_liner_Prisma%E2%98%86Illya_Movie__Licht_-_Namae_no_Nai_Shoujo">Fate/Kaleid liner Prisma☆Illya Movie: Litch - Namae no Nai Shoujo</a>
+                    <div class="tooltip">Segunda pelicula, secuela de donde quedo el anime.</div>
+                </li>
+				<li class="hover-item"><a href="https://myanimelist.net/anime/38897/Fate_kaleid_liner_Prisma%E2%98%86Illya__Prisma%E2%98%86Phantasm?q=prisma%20phantasm&cat=anime">Fate/Kaleid liner Prisma☆Phantasm</a>
+                    <div class="tooltip">Especial Carnival Phantasm de Kaleid. Skipeable</div>
+                </li>
+				<li class="hover-item"><a href="https://myanimelist.net/anime/49703/Fate_kaleid_liner_Prisma%E2%98%86Illya_Zoku-hen">Fate/kaleid liner Prisma☆Illya (Zoku-hen)</a>
+                    <div class="tooltip">En espera (05-10-24) a donde contara lo verdaderamente fumado de la historia de Kaleid.</div>
+                </li>
+				
+
+                <br class="spacer">
+                <li class="hover-item"><a href="https://myanimelist.net/anime/34662/Fate_Apocrypha?q=apocrypha&cat=anime">Fate/Apocrypha</a>
+                    <div class="tooltip">What if de un suceso de la 3ra guerra del santo grial que dio a esta de dos bandos y 14 servants en total.</div>
+                </li>
+
+
+                <br class="spacer">
+                <li class="hover-item"><a href="https://myanimelist.net/anime/34321/Fate_Grand_Order__First_Order?q=first%20order&cat=anime">Fate/Grand Order: First Order</a>
+                    <div class="tooltip">Lo primero de lo animado del juego para telefonos y novela visual-rpg FGO. Primera singularidad Fuyuki. Esta da paso al incio y prologo del juego y de lo que demas viene.</div>
+                </li>
+				<li class="hover-item"><a href="https://myanimelist.net/anime/38085/Fate_Grand_Order__Shinsei_Entaku_Ryouiki_Camelot_1_-_Wandering__Agateram?q=agateram&cat=anime">Fate/Grand Order: Shinsei Entaku Ryouiki Camelot 1 - Wandering; Agateram</a>
+                    <div class="tooltip">Primera pelicula; primera parte de la adaptacion de la 6ta singularidad. De la 2da a la 5ta no hubo adaptacion animada, pero exiten mangas de ello.</div>
+                </li>
+				<li class="hover-item"><a href="https://myanimelist.net/anime/38086/Fate_Grand_Order__Shinsei_Entaku_Ryouiki_Camelot_2_-_Paladin__Agateram">Fate/Grand Order: Shinsei Entaku Ryouiki Camelot 2 - Paladin; Agateram</a>
+                    <div class="tooltip">Segunda pelicula; segunda parte de la adaptacion de la 6ta singularidad. Aunque es bien verlo animado aqui se saltaron muchos detalles importantes y por eso su baja calificacion, pero que increibles peleas animadas.</div>
+                </li>
+				<li class="hover-item"><a href="https://myanimelist.net/anime/38084/Fate_Grand_Order__Zettai_Majuu_Sensen_Babylonia">Fate/Grand Order: Zettai Majuu Sensen Babylonia</a>
+                    <div class="tooltip">Anime de 21 capitulos; adaptacion completa de la 7ma singularidad. Una obra casi perfecta. En orden de emision salio antes de las pelis pero ya no es necesario verla antes sino despues de las pelis.</div>
+                </li>
+				<li class="hover-item"><a href="https://myanimelist.net/anime/38084/Fate_Grand_Order__Zettai_Majuu_Sensen_Babylonia">Fate/Grand Order: Shuukyoku Tokuiten - Kani Jikan Shinden Solomon</a>
+                    <div class="tooltip">3ra y ultima pelicula; adaptacion de la ultima singularidad y final de la primera parte de FGO. Aunque se quedo corta en la pelicula, fue una verdadera Infinity War. Verdaderamente epica</div>
+                </li>
+				<li class="hover-item"><a href="https://myanimelist.net/manga/113244/Manga_de_Wakaru_Fate_Grand_Order?q=manga%20de%20wakaru&cat=manga">Manga de Wakaru! Fate/Grand Order</a>
+                    <div class="tooltip">Especial del JUEGO fgo. Dificil de entender si no se juega al juego. Skipeable</div>
+                </li>
+                <li class="hover-item"><a href="https://myanimelist.net/anime/36914/Fate_Grand_Order__Himuro_no_Tenchi_-_7-nin_no_Saikyou_Ijin-hen?q=himuro%20no%20&cat=anime">Fate/Grand Order: Himuro no Tenchi - 7-nin no Saikyou Ijin-hen</a>
+                    <div class="tooltip">Especial. Una vaina rara animada por ufotable. Skipeable</div>
+                </li>
+                <li class="hover-item"><a href="https://myanimelist.net/anime/44248/Fate_Grand_Carnival?q=grand%2Fcarnival&cat=anime">Fate/Grand Carnival</a>
+                    <div class="tooltip">GRAND CARNIVAL DE FATE 4 EPISODIOS DE PURA BELLEZA. Skipeable si no has jugado el juego pero igual se merece verlo aun asi.</div>
+                </li>
+				<li class="hover-item"><a href="https://myanimelist.net/anime/54042/Fate_Grand_Order__Fujimaru_Ritsuka_wa_Wakaranai">Fate/Grand Order: Fujimaru Ritsuka wa Wakaranai [2nd season]</a>
+                    <div class="tooltip">2 temporadas de especiales animados que abarcan hasta la 2da parte. Muy skipeable pero no si has jugado el juego.</div>
+                </li>
+
+                <br class="spacer"> <!-- Espaciador -->
+				<li class="hover-item"><a href="https://myanimelist.net/anime/38936/Lord_El-Melloi_II_Sei_no_Jikenbo__Rail_Zeppelin_Grace_Note_-_Hakamori_to_Neko_to_Majutsushi?q=lord%20el&cat=anime">Lord El-Melloi II Sei no Jikenbo: Rail Zeppelin Grace Note - Hakamori to Neko to Majutsushi</a>
+                    <div class="tooltip">Ova precuela. Dio paso a la saga de adaptaciones del Lord-el melloi. Esta saga toma tiempo en la torre del reloj luego de los eventos del fate stay night, canonicamente tomado elementos de la ruta HF y UBW mayormente en donde Waver Velvet es el protagonista.</div>
+                </li>
+                <li class="hover-item"><a href="https://myanimelist.net/anime/38959/Lord_El-Melloi_II_Sei_no_Jikenbo__Rail_Zeppelin_Grace_Note">Lord El-Melloi Sei no Jikenbo: Rail Zeppelin Grace Note</a>
+                    <div class="tooltip">Anime de 13 caps gracias a la ova precuela. Obra maestra. Toma muchos elementos de las rutas fate, what ifs de las otras series y los vuelve canonicos dentro de esta misma, siendo asi una de las mas apegadas a la historia principal.</div>
+                </li>
+				<li class="hover-item"><a href="https://myanimelist.net/anime/49361/Lord_El-Melloi_II_Sei_no_Jikenbo__Rail_Zeppelin_Grace_Note_Special">Lord El-Melloi II Sei no Jikenbo: Rail Zeppelin Grace Note Special</a>
+                    <div class="tooltip">Una OVA. Una belleza</div>
+                </li>
+
+				<br class="spacer"> <!-- Espaciador -->
+				<li class="hover-item"><a href="https://myanimelist.net/anime/53127/Fate_strange_Fake__Whispers_of_Dawn?q=fate%20strange&cat=anime">Fate/strange Fake: Whispers of Dawn</a>
+                    <div class="tooltip">OVA que dio paso a lo animado de Fate/Strange fake. Es una guerra del santo grial que toma muchos personajes diversos y conceptos en una sola historia, haciendolo uno de los mejores fate que hay</div>
+                </li>
+				<li class="hover-item"><a href="https://myanimelist.net/anime/55830/Fate_strange_Fake">Fate/strange Fake</a>
+                    <div class="tooltip">Anime a adaptar lo siguiente a la OVA. En noviembre 2024 sera la premier en Los Angeles.</div>
+                </li>
+
+                <br class="spacer"> <!-- Espaciador -->
+                <li class="hover-item"><a href="https://myanimelist.net/anime/10012/Carnival_Phantasm?q=carnival%20phantasm&cat=anime">Carnival Phantasm</a>
+                    <div class="tooltip">El clasico Carnival Phantasm; Toma elementos de otras series del type moon, en este caso Tsukhime y Fate, y los coloca en un mismo mundo en forma de gag y comedia pura en forma de parodias exageradas. De lo mejor que hay.</div>
+                </li>
+
+                <br class="spacer"> <!-- Espaciador -->
+                <li class="hover-item"><a href="https://myanimelist.net/anime/37033/Emiya-san_Chi_no_Kyou_no_Gohan?q=emiya%20san&cat=anime">Emiya-san Chi no Kyou no Gohan</a>
+                    <div class="tooltip">Una serie que sigue la vida cotidiana de Emiya Shirou y su relación con la cocina.</div>
+                </li>
+
+                <br class="spacer"> <!-- Espaciador -->
+                <li class="hover-item"><a href="https://myanimelist.net/anime/33047/Fate_Extra__Last_Encore">Fate/Extra: Last Encore</a>
+                    <div class="tooltip">Primer anime de la adaptacion del juego Fate/extra del psp, en donde la Nero Claudius es la prota siendo la Saber Rojo, en donde este anime adapta una ruta original</div>
+                </li>
+                <li class="hover-item"><a href="https://myanimelist.net/anime/37651/Fate_Extra__Last_Encore_-_Illustrias_Tendousetsu">Fate/Extra: Last Encore - Illustrias Tendousetsu</a>
+                    <div class="tooltip">Continuacion de la misma. Muy mala recepcion por parte de la forma en que fue adaptada, mayormente por el estilo shaft, y por la direccion, ademas de lo original y no adaptar lo puntual.</div>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                content.classList.remove('show');
+            } else {
+                content.style.display = "block"; // Cambiar display a block al mostrar
+                setTimeout(() => {
+                    content.classList.add('show');
+                }, 10); // Añadir la clase después de que el contenido se muestre
+            }
+        }
+    </script>
+
+    <footer class="footer">
+        Basado en el orden de Floria, y modificado por Jeiden  <br><br>
+        Ps: Airflux es gay
+    </footer>
+</body>
+</html>
